@@ -2,3 +2,12 @@ body {
   background-color: pink;
   font-family: sans-serif;
 }
+
+a {
+  text-decoration: none;
+  
+  &:hover {
+    
+  }
+
+}
