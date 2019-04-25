@@ -1,15 +1,14 @@
 nav {
   $darkest: #FFF;
-  $lightest: #000;
+  $lightest: #888;
   
   .active {
     background-color: $darkest;
     color: $lightest;
     
-  }
-}
+  }}
 
 body {
-  background-color: pink;
+  background-color: red;
   font-family: sans-serif;
 }
