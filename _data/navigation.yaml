@@ -1,3 +1,7 @@
-- home
-- work
-- about
+- name: home
+  link: /
+- name: work
+  link: /work/
+- name: about
+  link: /about/
+
