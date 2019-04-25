@@ -1,3 +1,13 @@
+nav {
+  $darkest: #FFF;
+  $lightest: #000;
+  
+  .active {
+    background-color: $darkest;
+    color: $lightest;
+    
+  }
+}
 
 body {
   background-color: pink;
