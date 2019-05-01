@@ -1,14 +1,268 @@
-nav {
-  $darkest: #FFF;
-  $lightest: #888;
-  
-  .active {
-    background-color: $darkest;
-    color: $lightest;
-    
-  }}
+* {
+	margin:0; /* its better to use a reset like normalize.css */
+	padding:0;
+	box-sizing:border-box; /* this will make padding andborder included iin widths- this is best for responsive layouts*/
+	}
+	
+	body {
+		font-family:sans-serif;/* sets default font for entire site*/
+		background-image: url(../images/object.gif);
+		overflow-y: scroll;
+		
+		}
+	
+	/* sets all images to be responsive but not get any larger that their actual width. you could instead apply this using a class */
+	
+	img {
+		max-width:100%;
+		display:block;
+		}
 
-body {
-  background-color: red;
-  font-family: sans-serif;
+	/* these are some commonly used style you can add as defaults*/
+	.bold {font-weight:bold;}
+	.italics {font-style: italic;}
+	
+	.clearfix {clear:both;} /*used to clear floats */
+
+	a:link {color:white;}
+   	a:visited {color:white;}
+   	a:hover {color:yellow;}
+   	a:active {color:violet;}
+   	
+
+	header {
+ 		background-color:gray;
+  		margin:1px;
+ 		padding:1em;
+ 		border:1px solid white;
+ 		border-radius:2px 2px 3px;
+ 		}
+ 	
+ 	h2 {
+ 		color:white;
+ 		text-align:center;
+ 		font-family: 'Oswald', sans-serif;
+ 	
+ 		}
+
+ 	h3 {
+ 		color:white;
+ 		text-align:left;
+ 		padding:1em;
+ 		font-family: 'Work Sans', sans-serif;
+ 	
+ 		}
+
+ 	nav ul {
+		list-style-type:none;
+		display:flex;
+		flex-direction:column;
+		padding:1em;
+		
+	}
+	
+	nav ul li {
+		flex-grow:1;
+		
+	
+	}
+	
+	nav li a {
+		display:block; 
+		text-align:center;
+		margin:1em;
+	    }
+	    
+	nav li a:hover {
+		background-color:gray;
+	}
+
+	
+	p {
+		color:white;
+		}
+
+		
+	main {
+		background-color:black;
+		padding: 1em;
+	
+		}
+	
+	section {
+		background-image: url(images/silver.jpg);
+		background-repeat: repeat-x;
+	
+		}
+
+	.colum {
+		width:100%;
+		margin-top:1em;
+		}
+
+	.logo {
+		width:50%;
+	}
+
+	.box {
+		width:100%;
+		padding-top:2em;
+		}
+
+	.grid-item {
+		padding-top:1em;
+		padding-bottom:4%;
+		margin:0 auto;
+		width:100%;
+		transition-property:color, font-size;
+    	transition-duration: 1s;
+    	transition-timing-function: ease-in;
+		}
+
+	.grid-item:hover {
+		color:white;
+    	}
+
+	form {
+		display:flex;
+		flex-direction:column;
+		background-color:black;
+		max-width:100%;
+		font-family:helvetica;
+		margin:0 auto;
+		margin-top:1em;
+		}
+
+	label {
+		background-color:white;
+		padding: 1em;
+		display:block;
+		}
+
+	input, select {
+		background-color:lightgray;
+		margin:1em 0;
+		width:100%;
+		padding:1em;
+		}
+
+	textarea {
+		width:100%;
+		padding:1em;
+		margin:1em 0;
+		margin-top:1em;
+		}
+
+	.name-field {
+		width:100%;
+		}
+
+	button {
+		padding-top:1em;
+		padding: 1em;
+		font-size:1.5em;
+		background-color:white;
+		}
+
+	.text {
+		font-size:12px;
+		text-align: center;
+		margin-top:2em;
+		}
+
+	footer {
+		background-color:black;
+		padding:1em;
+		margin:1px;
+		border:1px solid white;
+ 		border-radius:2px 2px 3px;
+		}
+
+	
+	/* ================ Mobile First Method media queries ============= */
+	
+/* all your css before your media queries will style your media queries will style your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
+	
+/* small devices and tablets */	
+@media only screen and (min-width:768px) {
+	#wrap {
+			width:90%;
+			max-width:1200px;
+			margin:0 auto;
+		}
+
+	.row {
+			display:flex;
+			flex-wrap:wrap;
+			padding-left:1em;
+			padding-bottom:1em;
+			
+		}
+
+	.colum {
+			flex-grow:1;
+			flex-basis:50%;
+			padding:1em;
+			padding-left:1em;
+			padding-bottom:1em;
+			width:100%;
+
+		}
+
+	.box {
+			width:50%;
+		}
+
+	
+	.grid-item {
+			width:40%;
+	}
+		
+	.grid-sizer {
+			width:40%;
+	}
+	
+	.gutter-sizer {
+			width:5%;
+	}
+
+	form {
+			width:50%;
+		}
+
+	.logo {
+			width:100%;
+	}
+
+
+/* medium devices, desk tops */
+@media only screen and (min-width:992px) {
+
+	nav ul {
+		flex-direction:row; 
+		justify-content:space-between; 
+		}
+		
+	nav ul li {
+		flex-grow:1;
+		}
+
+	.grid-item {
+			width:30%;
+	}
+	.grid-sizer {
+			width:30%;
+	}
+
+}
+
+/* Large devices, wide screens */
+@media only screen and (min-width:1200px) {
+
+	.grid-item {
+			width:30%;
+	}
+	.grid-sizer {
+			width:30%;
+	}
 }
