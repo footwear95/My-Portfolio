@@ -1,0 +1,159 @@
+* {
+	margin:0; /* its better to use a reset like normalize.css */
+	padding:0;
+	box-sizing:border-box; /* this will make padding andborder included iin widths- this is best for responsive layouts*/
+	}
+	
+	body {
+		font-family:sans-serif;/* sets default font for entire site*/
+		background-color:#fff9f9;
+		overflow-y: scroll;
+		
+	}
+	
+	/* sets all images to be responsive but not get any larger that their actual width. you could instead apply this using a class */
+	
+	img {
+		max-width:100%;
+		display:block;
+
+	}
+
+	/* these are some commonly used style you can add as defaults*/
+	.bold {font-weight:bold;}
+	.italics {font-style: italic;}
+	
+	.clearfix {clear:both;} /*used to clear floats */
+
+	a:link {color:red;}
+   	a:visited {color:red;}
+   	a:hover {color:yellow;}
+   	a:active {color:violet;}
+
+	header {
+ 		background-color:black;
+  		margin:1px;
+ 		padding:1em;	
+ 	}
+ 	
+ 	h2 {
+ 		color:white;
+ 		text-align:center;
+ 	
+ 	}
+	
+	p {
+		color:white;
+	}
+
+
+	nav ul {
+		list-style-type:none;
+		display:flex;
+	}
+	
+	nav ul li {
+		flex-grow:1;
+		padding:1em;
+	}
+	
+	nav li a {
+		text-decoration:none;
+		padding:1em;
+		margin-left:580px;
+		background-color:white;
+	    }
+	    
+	nav li a:hover {
+		background-color:red;
+		}
+		
+	main {
+		background-color:black;
+		padding:1em;
+	}
+	
+	section {
+		background-color:black;
+		padding:1em;
+	}
+
+	.gutter-sizer {width:4%;}
+
+	.grid-item{margin-bottom:4%;}
+
+
+	footer {
+		background-color:black;
+		padding:1em;
+		margin:1px;
+		}
+
+
+
+	
+	
+	
+	
+	/* ================ Mobile First Method media queries ============= */
+	
+/* all your css before your media queries will style your media queries will style your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
+	
+/* small devices and tablets */	
+@media only screen and (min-width:768px) {
+	#wrap {
+			width:85%;
+			max-width:1200px;
+			margin:0 auto;
+		}
+		
+
+	nav ul {
+		flex-direction:row; 
+		justify-content:space-between;
+	}
+	
+		nav ul li {
+			flex-grow:1;
+			margin-left:2em;
+		}
+		
+	
+
+	nav ul, li, a {
+			width:35%;
+			flex-grow:1;
+			margin-top:3em;
+}
+
+	nav li a {
+		text-decoration:none;
+		padding:1em;
+		margin-left:580px;
+		background-color:white;
+	    }
+
+
+
+
+	
+/* medium devices, desk tops */
+@media only screen and (min-width:992px) {
+
+	   .grid-item, .grid-sizer {
+	   		width:21%;
+	   }
+
+
+
+
+
+}
+
+/* Large devices, wide screens */
+@media only screen and (min-width:1200px) {
+	 .grid-item, .grid-sizer {
+	   		width:21%;
+	   }
+
+}
