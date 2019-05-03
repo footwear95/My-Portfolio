@@ -15,11 +15,6 @@ $background_color_4: lightgray;
 /* sets all images to be responsive but not get any larger that their actual width. you could instead apply this using a class */
 /* these are some commonly used style you can add as defaults*/
 /*used to clear floats */
-/* ================ Mobile First Method media queries ============= */
-/* all your css before your media queries will style your media queries will style your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
-/* small devices and tablets */
-/* medium devices, desk tops */
-/* Large devices, wide screens */
 * {
 	margin: 0;
 	padding: 0;
@@ -81,21 +76,19 @@ nav {
 		display: flex;
 		flex-direction: column;
 		padding: 1em;
+		
 		li {
 			flex-grow: 1;
-		}
-	}
-	li {
-		a {
-			display: block;
-			text-align: center;
-			margin: 1em;
-			&:hover {
-				background-color: $background_color_1;
-			}
-		}
-	}
-}
+		}}
+	
+	li a {
+		display: block;
+		text-align: center;
+		margin: 1em;
+			
+		&:hover {
+			background-color: $background_color_1;
+		}}}}
 p {
 	color: $color_1;
 }
@@ -126,6 +119,7 @@ section {
 	transition-property: color, font-size;
 	transition-duration: 1s;
 	transition-timing-function: ease-in;
+	
 	&:hover {
 		color: $color_1;
 	}
@@ -183,39 +177,14 @@ footer {
 	border: 1px solid white;
 	border-radius: 2px 2px 3px;
 }
+
+/* ================ Mobile First Method media queries ============= */
+	
+/* all your css before your media queries will style your media queries will style your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
+	
+/* small devices and tablets */
+
 @media only screen and (min-width:768px) {
-	#wrap {
-		width: 90%;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		padding-left: 1em;
-		padding-bottom: 1em;
-	}
-	.colum {
-		flex-grow: 1;
-		flex-basis: 50%;
-		padding: 1em;
-		padding-left: 1em;
-		padding-bottom: 1em;
-		width: 100%;
-	}
-	
-	form {
-		width: 50%;
-	}
-	.logo {
-		width: 100%;
-	}
-	
-	nav ul li {
-		flex-grow: 1;
-		}
-	
-	@media only screen and (min-width:768px) {
 	#wrap {
 			width:90%;
 			max-width:1200px;
@@ -239,35 +208,61 @@ footer {
 			width:100%;
 
 		}
+
+	.box {
+			width:50%;
+		}
+
 	
-		.box {
-			width: 50%;
+	.grid-item {
+			width:40%;
+	}
+		
+	.grid-sizer {
+			width:40%;
+	}
+	
+	.gutter-sizer {
+			width:5%;
+	}
+
+	form {
+			width:50%;
 		}
-		.grid-item {
-			width: 40%;
-			width: 30%;
-		}
-		.grid-sizer {
-			width: 40%;
-			width: 30%;
-		}
-		.gutter-sizer {
-			width: 5%;
+
+	.logo {
+			width:100%;
+	}
+
+	
+/* medium devices, desk tops */
+@media only screen and (min-width:992px) {
+
+	nav ul {
+		flex-direction:row; 
+		justify-content:space-between; 
 		}
 		
-@media only screen and (min-width:1200px) {
+	nav ul li {
+		flex-grow:1;
+		}
+
 	.grid-item {
-		width: 30%;
+			width:30%;
 	}
 	.grid-sizer {
-		width: 30%;
+			width:30%;
 	}
-	
-	@media only screen and (min-width:992px) {
-		nav ul {flex-direction: row;}
-		justify-content: space-between;
-		
-	}
-	
+
 }
 
+/* Large devices, wide screens */
+@media only screen and (min-width:1200px) {
+
+	.grid-item {
+			width:30%;
+	}
+	.grid-sizer {
+			width:30%;
+	}
+}
