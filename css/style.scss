@@ -1,5 +1,14 @@
 ---
 ---
+
+$color-white: white;
+$color-yellow: yellow;
+$color-purple: violet;
+$color-gray: darkgray;
+$color-black: black;
+$color-lightgray: lightgray;
+
+
 * {
 	margin:0; /* its better to use a reset like normalize.css */
 	padding:0;
@@ -26,14 +35,14 @@
 	
 	.clearfix {clear:both;} /*used to clear floats */
 
-	a:link {color:white;}
-   	a:visited {color:white;}
-   	a:hover {color:yellow;}
-   	a:active {color:violet;}
+	a:link {color:$color-white;}
+   	a:visited {color:$color-white;}
+   	a:hover {color:$color-yellow;}
+   	a:active {color:$color-purple;}
    	
 
 	header {
- 		background-color:gray;
+ 		background-color:$color-gray;
   		margin:1px;
  		padding:1em;
  		border:1px solid white;
@@ -61,32 +70,34 @@
 		flex-direction:column;
 		padding:1em;
 		
-	}
 	
-	nav ul li {
-		flex-grow:1;
-		
 	
-	}
-	
-	nav li a {
-		display:block; 
-		text-align:center;
-		margin:1em;
-	    }
-	    
-	nav li a:hover {
-		background-color:gray;
-	}
+        &__ul li {
+            flex-grow:1;
 
+
+        }
+	
+        &__li a {
+            display:block; 
+            text-align:center;
+            margin:1em;
+            
+	    
+        &__li a:hover {
+            background-color:$color-gray;
+            
+
+        }}
+        }
 	
 	p {
-		color:white;
+		color:$color-white;
 		}
 
 		
 	main {
-		background-color:black;
+		background-color:$color-black;
 		padding: 1em;
 	
 		}
@@ -122,13 +133,13 @@
 		}
 
 	.grid-item:hover {
-		color:white;
+		color:$color-white;
     	}
 
 	form {
 		display:flex;
 		flex-direction:column;
-		background-color:black;
+		background-color:$color-black;
 		max-width:100%;
 		font-family:helvetica;
 		margin:0 auto;
@@ -136,16 +147,20 @@
 		}
 
 	label {
-		background-color:white;
+		background-color:$color-white;
 		padding: 1em;
 		display:block;
 		}
 
 	input, select {
-		background-color:lightgray;
+		background-color:$color-lightgray;
 		margin:1em 0;
 		width:100%;
 		padding:1em;
+		}
+		
+    .box {
+        max-width:700px;
 		}
 
 	textarea {
@@ -163,7 +178,7 @@
 		padding-top:1em;
 		padding: 1em;
 		font-size:1.5em;
-		background-color:white;
+		background-color:$color-white;
 		}
 
 	.text {
@@ -173,7 +188,7 @@
 		}
 
 	footer {
-		background-color:black;
+		background-color:$color-black;
 		padding:1em;
 		margin:1px;
 		border:1px solid white;
@@ -219,7 +234,9 @@
 		}
 
 	.box {
-			width:50%;
+			max-width:700px;
+			padding-left:1em;
+			padding-bottom:1em;
 		}
 
 	
@@ -280,4 +297,4 @@
 	.grid-sizer {
 			width:30%;
 	}
-	}}
+}
