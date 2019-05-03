@@ -122,8 +122,8 @@ section {
 	
 	&:hover {
 		color: $color_1;
-	}
-}
+	}}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -180,7 +180,8 @@ footer {
 
 /* ================ Mobile First Method media queries ============= */
 	
-/* all your css before your media queries will style your media queries will style your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
+/* all your css before your media queries will style your media queries will style 
+your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
 	
 /* small devices and tablets */
 
@@ -248,10 +249,10 @@ footer {
 		}
 
 	.grid-item {
-			width:30%;
+		width:30%;
 	}
 	.grid-sizer {
-			width:30%;
+		width:30%;
 	}
 
 }
@@ -260,9 +261,9 @@ footer {
 @media only screen and (min-width:1200px) {
 
 	.grid-item {
-			width:30%;
+		width:30%;
 	}
 	.grid-sizer {
-			width:30%;
+		width:30%;
 	}}
 }
