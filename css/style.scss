@@ -63,31 +63,29 @@ $color-lightgray: lightgray;
  	
  		}
 
- 	nav ul {
+ 	 	nav ul {
 		list-style-type:none;
 		display:flex;
 		flex-direction:column;
 		padding:1em;
 		
+	}
 	
+	nav ul li {
+		flex-grow:1;
+		
 	
-        &__ul li {
-            flex-grow:1;
-
-
-        }
+	}
 	
-        &__li a {
-            display:block; 
-            text-align:center;
-            margin:1em;
-            
+	nav li a {
+		display:block; 
+		text-align:center;
+		margin:1em;
+	    }
 	    
-        &__li a:hover {
-            background-color:$color-gray;
-            
-
-        }}}
+	nav li a:hover {
+		background-color:$color-gray;
+	}
 	
 	p {
 		color:$color-white;
