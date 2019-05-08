@@ -1,116 +1,124 @@
 ---
 ---
-$color_1: white;
-$color_2: yellow;
-$color_3: violet;
-$font_family_1: sans-serif;
-$font_family_2: 'Oswald', sans-serif;
-$font_family_3: 'Work Sans', sans-serif;
-$font_family_4: helvetica;
-$background_color_1: gray;
-$background_color_2: black;
-$background_color_3: white;
-$background_color_4: lightgray;
-
 /* sets all images to be responsive but not get any larger that their actual width. you could instead apply this using a class */
 /* these are some commonly used style you can add as defaults*/
 /*used to clear floats */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
-	font-family: $font_family_1;
+	font-family: sans-serif;
 	background-image: url(../images/object.gif);
 	overflow-y: scroll;
 }
+
 img {
 	max-width: 100%;
 	display: block;
 }
+
 .bold {
 	font-weight: bold;
 }
+
 .italics {
 	font-style: italic;
 }
+
 .clearfix {
 	clear: both;
 }
-a {
-	&:link {
-		color: $color_1;
-	}
-	&:visited {
-		color: $color_1;
-	}
-	&:hover {
-		color: $color_2;
-	}
-	&:active {
-		color: $color_3;
-	}
+
+a:link {
+	color: white;
 }
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: yellow;
+}
+
+a:active {
+	color: violet;
+}
+
 header {
-	background-color: $background_color_1;
+	background-color: gray;
 	margin: 1px;
 	padding: 1em;
 	border: 1px solid white;
 	border-radius: 2px 2px 3px;
 }
+
 h2 {
-	color: $color_1;
+	color: white;
 	text-align: center;
-	font-family: $font_family_2;
+	font-family: "Oswald", sans-serif;
 }
+
 h3 {
-	color: $color_1;
+	color: white;
 	text-align: left;
 	padding: 1em;
-	font-family: $font_family_3;
+	font-family: "Work Sans", sans-serif;
 }
-nav {
-	ul {
-		list-style-type: none;
-		display: flex;
-		flex-direction: column;
-		padding: 1em;
-		
-		li {
-			flex-grow: 1;
-		}}
-	
-	li a {
-		display: block;
-		text-align: center;
-		margin: 1em;
-			
-		&:hover {
-			background-color: $background_color_1;
-		}}}
-p {
-	color: $color_1;
-}
-main {
-	background-color: $background_color_2;
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
 	padding: 1em;
 }
+
+nav ul li {
+	flex-grow: 1;
+}
+
+nav li a {
+	display: block;
+	text-align: center;
+	margin: 1em;
+}
+
+nav li a:hover {
+	background-color: gray;
+}
+
+p {
+	color: white;
+}
+
+main {
+	background-color: black;
+	padding: 1em;
+}
+
 section {
 	background-image: url(images/silver.jpg);
 	background-repeat: repeat-x;
 }
+
 .colum {
 	width: 100%;
 	margin-top: 1em;
 }
+
 .logo {
 	width: 50%;
 }
+
 .box {
 	width: 100%;
 	padding-top: 2em;
 }
+
 .grid-item {
 	padding-top: 1em;
 	padding-bottom: 4%;
@@ -119,59 +127,66 @@ section {
 	transition-property: color, font-size;
 	transition-duration: 1s;
 	transition-timing-function: ease-in;
-	
-	&:hover {
-		color: $color_1;
-	}}
+}
+
+.grid-item:hover {
+	color: white;
+}
 
 form {
 	display: flex;
 	flex-direction: column;
-	background-color: $background_color_2;
+	background-color: black;
 	max-width: 100%;
-	font-family: $font_family_4;
+	font-family: helvetica;
 	margin: 0 auto;
 	margin-top: 1em;
 }
+
 label {
-	background-color: $background_color_3;
+	background-color: white;
 	padding: 1em;
 	display: block;
 }
+
 input {
-	background-color: $background_color_4;
+	background-color: lightgray;
 	margin: 1em 0;
 	width: 100%;
 	padding: 1em;
 }
+
 select {
-	background-color: $background_color_4;
+	background-color: lightgray;
 	margin: 1em 0;
 	width: 100%;
-	padding: 1em;
 }
+
 textarea {
 	width: 100%;
-	padding: 1em;
 	margin: 1em 0;
 	margin-top: 1em;
 }
+
 .name-field {
 	width: 100%;
 }
+
 button {
 	padding-top: 1em;
 	padding: 1em;
 	font-size: 1.5em;
-	background-color: $background_color_3;
+	background-color: white;
 }
+
 .text {
 	font-size: 12px;
 	text-align: center;
 	margin-top: 2em;
 }
+
 footer {
-	background-color: $background_color_2;
+	background-color: black;
 	padding: 1em;
 	margin: 1px;
 	border: 1px solid white;
@@ -179,91 +194,83 @@ footer {
 }
 
 /* ================ Mobile First Method media queries ============= */
-	
 /* all your css before your media queries will style your media queries will style 
 your site when the viewport is less than your first break point - in this example that means 767px wide and smaller*/
-	
 /* small devices and tablets */
-
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
 	#wrap {
-			width:90%;
-			max-width:1200px;
-			margin:0 auto;
-		}
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 
 	.row {
-			display:flex;
-			flex-wrap:wrap;
-			padding-left:1em;
-			padding-bottom:1em;
-			
-		}
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 1em;
+		padding-bottom: 1em;
+	}
 
 	.colum {
-			flex-grow:1;
-			flex-basis:50%;
-			padding:1em;
-			padding-left:1em;
-			padding-bottom:1em;
-			width:100%;
-
-		}
+		flex-grow: 1;
+		flex-basis: 50%;
+		padding: 1em;
+		padding-left: 1em;
+		padding-bottom: 1em;
+		
+	}
 
 	.box {
-			width:50%;
-		}
+		width: 50%;
+	}
 
-	
 	.grid-item {
-			width:40%;
+		width: 40%;
 	}
-		
+
 	.grid-sizer {
-			width:40%;
+		width: 40%;
 	}
-	
+
 	.gutter-sizer {
-			width:5%;
+		width: 5%;
 	}
 
 	form {
-			width:50%;
-		}
+		width: 50%;
+	}
 
 	.logo {
-			width:100%;
+		width: 100%;
 	}
-
-	
-/* medium devices, desk tops */
-@media only screen and (min-width:992px) {
-
-	nav ul {
-		flex-direction:row; 
-		justify-content:space-between; 
-		}
-		
-	nav ul li {
-		flex-grow:1;
-		}
-
-	.grid-item {
-		width:30%;
-	}
-	.grid-sizer {
-		width:30%;
-	}
-
+  /* medium devices, desk tops */
 }
 
-/* Large devices, wide screens */
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+	nav ul {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	nav ul li {
+		flex-grow: 1;
+	}
 
 	.grid-item {
-		width:30%;
+		width: 30%;
 	}
+
 	.grid-sizer {
-		width:30%;
-	}}
+		width: 30%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1200px) {
+	.grid-item {
+		width: 30%;
+	}
+
+	.grid-sizer {
+		width: 30%;
+	}
 }
